@@ -1,0 +1,40 @@
+@model IEnumerable<shopping.Models.product>
+
+<!-- ... بقیه بخش‌ها مثل filter و section ... -->
+<section class="products-section">
+    <h2>محصولات ویژه</h2>
+
+    <div class="filter">
+        <button class="active" onclick="filterProducts('all', this)">همه</button>
+        <button onclick="filterProducts('nuts', this)">خشکبار</button>
+        <button onclick="filterProducts('spice', this)">ادویه</button>
+        <button onclick="filterProducts('rice', this)">برنج</button>
+    </div>
+
+    <div class="products-grid" id="productList">
+        @foreach (var product in Model)
+        {
+            string catClass = "nuts"; // پیش‌فرض
+
+            if (product.Title.Contains("زعفران") ||
+                product.Title.Contains("دارچین") ||
+                product.Title.Contains("زنجبیل"))
+            {
+                catClass = "spice";
+            }
+            else if (product.Title.Contains("برنج") ||
+                     product.Title.Contains("هاشمی") ||
+                     product.Title.Contains("طارم"))
+            {
+                catClass = "rice";
+                
+            }
+
+            <div class="card @catClass">
+                <img src="~/asset/pic/@product.Image" alt="@product.Title">
+                <h4>@product.Title</h4>
+                <p>@product.Description</p>
+            </div>
+        }
+    </div>
+</section>

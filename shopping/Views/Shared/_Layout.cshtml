@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - shopping</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/asset/css/site.css"/>
+</head>
+<body>
+
+<header>
+    <h1>🌿 فروشگاه خشکبار سالم</h1>
+    <nav>
+        <ul>
+            <li><a asp-action="index" asp-controller="Home">خانه</a></li>
+            <li ><a  asp-action="product" asp-controller="Home">محصولات</a></li>
+            <li><a asp-action="aboutus" asp-controller="Home">درباره ما</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+@RenderBody()
+<footer>
+    © تمامی حقوق محفوظ است | فروشگاه خشکبار سالم
+</footer>
+<script src="~/asset/js/site.js"></script>
+</body>
+</html>
