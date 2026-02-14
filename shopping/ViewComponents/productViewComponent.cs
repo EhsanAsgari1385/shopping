@@ -20,6 +20,8 @@ namespace shopping.ViewComponents
                 new product(8, "برنج طارم", "معطر و ممتاز", "8.jpg"),
                 new product(9, "برنج هاشمی", "کیفیت اعلا", "10.jpg"),
                 new product(9, "برنج هاشمی", "کیفیت اعلا", "10.jpg"),
+                new product(9, "برنج هاشمی", "کیفیت اعلا", "10.jpg"),
+
             };
          return View("_product",product);
         }
